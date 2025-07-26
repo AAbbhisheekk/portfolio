@@ -1,0 +1,80 @@
+.education-container {
+  padding: 40px;
+  margin: 20px;
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 20px;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 0.8s forwards;
+}
+
+.education-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.education-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.edu-img {
+  width: 60px;
+  height: 60px;
+}
+
+.edu-info h3 {
+  margin: 0;
+  color: #007acc;
+  font-size: 1.3rem;
+}
+
+.edu-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.score {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Animations */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hover effect */
+.education-card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s;
+}

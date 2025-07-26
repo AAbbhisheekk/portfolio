@@ -1,0 +1,101 @@
+.contact-container {
+  padding: 40px;
+  margin: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0faff);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left image */
+.contact-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  animation: slideInLeft 0.8s forwards;
+}
+
+/* Right content */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  animation: slideInRight 0.8s forwards;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Cards for each contact method */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.7s forwards;
+}
+
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.4s; }
+.contact-card:nth-child(4) { animation-delay: 0.6s; }
+
+.contact-card img {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-card a, .contact-card span {
+  font-size: 1rem;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
